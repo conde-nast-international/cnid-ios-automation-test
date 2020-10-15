@@ -1,0 +1,60 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - Kingfisher (5.15.6):
+    - Kingfisher/Core (= 5.15.6)
+  - Kingfisher/Core (5.15.6)
+  - lottie-ios (3.1.8)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - PullToReach (0.1.2)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - Realm (5.5.0):
+    - Realm/Headers (= 5.5.0)
+  - Realm/Headers (5.5.0)
+  - RealmSwift (5.5.0):
+    - Realm (= 5.5.0)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet
+  - Kingfisher
+  - lottie-ios
+  - PromiseKit
+  - PullToReach
+  - R.swift
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - DZNEmptyDataSet
+    - Kingfisher
+    - lottie-ios
+    - PromiseKit
+    - PullToReach
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  PullToReach: 0e747e10403d2827277f8728151ad7998d4576eb
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  Realm: fb399d76f44042e5cdfc630f33828fdb4d077345
+  RealmSwift: 3b7e62356207ef16d34de4e55d475163bd2062bb
+
+PODFILE CHECKSUM: e4bb83312e13c41d7ebf11f320a22797b5656fdf
+
+COCOAPODS: 1.9.3
