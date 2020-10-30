@@ -34,8 +34,8 @@ xcuserdata
 #
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 Pods/
-
-
+/Screenshots
+/target
 /dist
 /distRegression
 /testReports
@@ -141,31 +141,3 @@ lint/tmp/
 # Android Profiling
 *.hprof
 
-CondeNastTest/Screenshots/clickDummyButtonFailTest20201030012112.png
-CondeNastTest/Screenshots/clickExperimentalTest20201030011044.png
-CondeNastTest/Screenshots/clickWired25Test20201030011049.png
-CondeNastTest/src/test/java/reporting/ExtentManager.java
-CondeNastTest/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-CondeNastTest/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-CondeNastTest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
-CondeNastTest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
-CondeNastTest/target/surefire-reports/bullet_point.png
-CondeNastTest/target/surefire-reports/collapseall.gif
-CondeNastTest/target/surefire-reports/failed.png
-CondeNastTest/target/surefire-reports/jquery-3.4.1.min.js
-CondeNastTest/target/surefire-reports/navigator-bullet.png
-CondeNastTest/target/surefire-reports/passed.png
-CondeNastTest/target/surefire-reports/skipped.png
-CondeNastTest/target/surefire-reports/TEST-TestSuite.xml
-CondeNastTest/target/surefire-reports/testng-failed.xml
-CondeNastTest/target/surefire-reports/testng-reports.css
-CondeNastTest/target/surefire-reports/testng-reports.js
-CondeNastTest/target/surefire-reports/testng-reports1.css
-CondeNastTest/target/surefire-reports/testng-reports2.js
-CondeNastTest/target/surefire-reports/testng-results.xml
-CondeNastTest/target/surefire-reports/testng.css
-CondeNastTest/target/surefire-reports/TestSuite.txt
-CondeNastTest/target/surefire-reports/Command line suite/Command line test.xml
-CondeNastTest/target/surefire-reports/Command line suite/testng-failed.xml
-CondeNastTest/target/surefire-reports/junitreports/TEST-testCase.homeScreenTest.xml
-CondeNastTest/target/surefire-reports/old/Command line suite/Command line test.properties
