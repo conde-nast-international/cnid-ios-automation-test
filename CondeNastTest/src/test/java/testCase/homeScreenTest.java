@@ -1,4 +1,4 @@
-package testCase;
+package testcase;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -24,13 +24,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class homeScreenTest extends BaseTest {
+public class HomeScreenTest extends BaseTest {
 
     public ExtentHtmlReporter htmlReporter;
     public ExtentReports extent;
     public ExtentTest logger;
     File reportDir = new File(System.getProperty("user.dir"));
-
     String reportFilePath = reportDir.toString() + "/ExtentReports/";
 
     @BeforeClass
@@ -40,17 +39,24 @@ public class homeScreenTest extends BaseTest {
         // Create an object of Extent Reports
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Host Name", "Krishna MacBook Pro");
+        extent.setSystemInfo("Host Name", "Krishna's MacBook Pro");
         extent.setSystemInfo("Environment", "Production");
         extent.setSystemInfo("User Name", "Krishna chetan");
         htmlReporter.config().setDocumentTitle("Conde Nast Demo ");
         // Name of the report
         htmlReporter.config().setReportName("Wired Tests");
         // Dark Theme
-        htmlReporter.config().setTheme(Theme.STANDARD);
+        htmlReporter.config().setTheme(Theme.DARK);
     }
 
-    //This method is to capture the screenshot and return the path of the screenshot.
+    /**
+     *
+     * @param driver
+     * @param screenshotName
+     * @return
+     * @throws IOException
+     * This method is to capture the screenshot and return the path of the screenshot
+     */
     public static String getScreenShot(WebDriver driver, String screenshotName) throws IOException {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
@@ -62,7 +68,10 @@ public class homeScreenTest extends BaseTest {
         return destination;
     }
 
-
+    /**
+     * Method to Verify  home page loading
+     * @throws InterruptedException
+     */
     @Test
     public void HomeScreenTest() throws InterruptedException {
         WiredHome home = new WiredHome(driver);
@@ -76,10 +85,12 @@ public class homeScreenTest extends BaseTest {
         catch(Exception e)
         {
             logger.createNode("Home screen  is loaded successfully ");
-        }
+        } }
 
-    }
-
+    /**
+     * Method to click on wired button on home page
+     * @throws InterruptedException
+     */
     @Test(dependsOnMethods ="HomeScreenTest")
     public void clickWired25Test() throws InterruptedException {
         WiredHome home = new WiredHome(driver);
@@ -87,18 +98,18 @@ public class homeScreenTest extends BaseTest {
         try
         {
             home.ClickWiredButton();
+            Thread.sleep(3000);
             logger.createNode("Wired Button  is clicked successfully ");
         }
         catch(Exception e)
         {
             logger.createNode("Unable to click Wired Button");
-        }
+        } }
 
-
-
-
-        Thread.sleep(5000);
-    }
+    /**
+     * Method to click on Wired25 tab
+     * @throws InterruptedException
+     */
 
     @Test(dependsOnMethods ="clickWired25Test")
     public void clickExperimentalTest() throws InterruptedException {
@@ -106,27 +117,35 @@ public class homeScreenTest extends BaseTest {
         try
         {
             home.ClickExperimentaldButton();
+            Thread.sleep(3000);
             logger.createNode("Experimental Button  is clicked successfully ");
 
         }
         catch(Exception e)
         {
             logger.createNode("Unable to click Experimental Button");
-        }
-        Thread.sleep(5000);
-    }
+        } }
 
+    /**
+     * Method to Click on Experimental tab from home screen
+     * @throws InterruptedException
+     */
     @Test(dependsOnMethods ="clickExperimentalTest")
-    public void clickDummyButtonFailTest() throws InterruptedException {
+    public void clickDummyButtonFailTest() throws InterruptedException
+    {
         WiredHome home = new WiredHome(driver);
-
             home.DummyButton();
             logger.createNode("Dummy button test ");
-
     }
-    
+
+    /**
+     *
+     * @param result
+     * @throws Exception
+     */
     @AfterMethod
-    public void getResult(ITestResult result) throws Exception{
+    public void getResult(ITestResult result) throws Exception
+    {
         if(result.getStatus() == ITestResult.FAILURE){
             //MarkupHelper is used to display the output in different colors
             logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
@@ -144,8 +163,7 @@ public class homeScreenTest extends BaseTest {
         else if(result.getStatus() == ITestResult.SUCCESS)
         {
             logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
-        }
-    }
+        } }
 
     @AfterTest
     public void endReport() {
