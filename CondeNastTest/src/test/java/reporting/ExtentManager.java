@@ -38,7 +38,7 @@ public class ExtentManager {
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         //Set environment details
-        extent.setSystemInfo("OS", "Windows");
+        extent.setSystemInfo("OS", "MAC");
         extent.setSystemInfo("AUT", "QA");
 
         return extent;
