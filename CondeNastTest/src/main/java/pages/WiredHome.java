@@ -10,7 +10,7 @@ public class WiredHome extends BasePage {
     private By WiredBTn = By.xpath(".//*[@text='WIRED25']");
     private By ExperimentalBtn = By.xpath(".//*[@text='EXPERIMENTAL']");
     private By HeaderText = By.xpath(".//*[@text='TOP STORIES']");
-
+    private By FailId = By.id("Dummy");
 
 
     public void Verifyhomescreen() throws InterruptedException
@@ -24,12 +24,16 @@ public class WiredHome extends BasePage {
     public void ClickWiredButton() throws InterruptedException
     {
         click(WiredBTn);
-        //assertText(WiredBTn,"WIRED25");
     }
 
     public void ClickExperimentaldButton() throws InterruptedException
     {
         click(ExperimentalBtn);
+
+    }
+    public void DummyButton() throws InterruptedException
+    {
+        getText(FailId);
         //assertText(ExperimentalBtn,"EXPERIMENTAL");
     }
 
